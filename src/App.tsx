@@ -31,8 +31,8 @@ function Logo() {
     <svg width="36" height="36" viewBox="0 0 36 36" aria-label="Cracking logo" fill="none">
       <rect x="2" y="2" width="32" height="32" stroke="currentColor" strokeWidth="2" />
       <line x1="2" y1="2" x2="34" y2="34" stroke="currentColor" strokeWidth="2" />
-      <line x1="18" y1="2" x2="2" y2="18" stroke="#b8331f" strokeWidth="2" />
-      <line x1="34" y1="18" x2="18" y2="34" stroke="#b8331f" strokeWidth="2" />
+      <line x1="18" y1="2" x2="2" y2="18" stroke="#A9CBE0" strokeWidth="2" />
+      <line x1="34" y1="18" x2="18" y2="34" stroke="#A9CBE0" strokeWidth="2" />
     </svg>
   );
 }
@@ -134,31 +134,31 @@ function CountyDemographics({ key_: ck }: { key_: keyof typeof COUNTIES }) {
 
 function GrowthChart() {
   const data = [
-    { group: "White", pct: STATE_GROWTH.white, color: "#b6ad97" },
-    { group: "Black", pct: STATE_GROWTH.black, color: "#3d2c1d" },
-    { group: "Latino", pct: STATE_GROWTH.latino, color: "#c2553a" },
-    { group: "AAPI", pct: STATE_GROWTH.aapi, color: "#2e6f7a" },
+    { group: "White", pct: STATE_GROWTH.white, color: "#BFBEB9" },
+    { group: "Black", pct: STATE_GROWTH.black, color: "#1F3A5F" },
+    { group: "Latino", pct: STATE_GROWTH.latino, color: "#A84B2F" },
+    { group: "AAPI", pct: STATE_GROWTH.aapi, color: "#3D7B89" },
   ];
   return (
     <div style={{ width: "100%", height: 260 }}>
       <ResponsiveContainer>
         <BarChart data={data} margin={{ top: 24, right: 24, left: 8, bottom: 8 }}>
-          <CartesianGrid stroke="#c9c0ad" strokeDasharray="2 4" vertical={false} />
+          <CartesianGrid stroke="#E4E2DC" strokeDasharray="2 4" vertical={false} />
           <XAxis
             dataKey="group"
-            stroke="#5a544b"
-            tick={{ fontSize: 12, fontFamily: "Satoshi" }}
-            axisLine={{ stroke: "#1a1714" }}
+            stroke="#6B6A66"
+            tick={{ fontSize: 13, fontFamily: "inherit", fontWeight: 600 }}
+            axisLine={{ stroke: "#E4E2DC" }}
             tickLine={false}
           />
           <YAxis
-            stroke="#5a544b"
-            tick={{ fontSize: 11, fontFamily: "JetBrains Mono" }}
+            stroke="#6B6A66"
+            tick={{ fontSize: 12, fontFamily: "inherit" }}
             axisLine={false}
             tickLine={false}
             tickFormatter={(v) => `${v}%`}
           />
-          <Bar dataKey="pct" radius={[2, 2, 0, 0]}>
+          <Bar dataKey="pct" radius={[3, 3, 0, 0]}>
             {data.map((d, i) => (
               <Cell key={i} fill={d.color} />
             ))}
@@ -169,7 +169,7 @@ function GrowthChart() {
                 const n = Number(v);
                 return `${n > 0 ? "+" : ""}${n.toFixed(1)}%`;
               }) as never}
-              style={{ fontFamily: "Gambarino, serif", fontSize: 14, fill: "#1a1714" }}
+              style={{ fontFamily: "inherit", fontSize: 14, fontWeight: 700, fill: "#1F3A5F" }}
             />
           </Bar>
         </BarChart>
@@ -284,15 +284,6 @@ export default function App() {
           </div>
         </div>
       </section>
-
-      {/* Pullquote */}
-      <blockquote className="pullquote">
-        "The only minority they were talking about in this case was Black voters. That was it."
-        <cite>
-          — State Rep. Rob Leverett, GA House Redistricting Chair (R), to NPR, Dec 2023, on why
-          Gwinnett's coalition district was dismantled
-        </cite>
-      </blockquote>
 
       {/* County selector */}
       <section className="section">
