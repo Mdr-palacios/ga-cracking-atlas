@@ -662,3 +662,167 @@ a:hover { text-decoration: underline; }
 @media (max-width: 720px) {
   .foot { grid-template-columns: 1fr; gap: 32px; }
 }
+
+/* ============================================================
+   County map card
+   ============================================================ */
+.map-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+.map-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 18px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+.map-head .eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--teal);
+  margin-bottom: 4px;
+}
+.map-head h3 {
+  margin: 0;
+  font-size: 20px;
+  color: var(--navy);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+.map-tabs {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.map-tab {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.map-tab:hover:not(.active) { background: var(--paler); }
+.map-tab.active {
+  background: var(--navy);
+  color: #fff;
+  border-color: var(--navy);
+}
+.map-tab .badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 10px;
+  background: var(--paler);
+  color: var(--warn);
+  letter-spacing: 0.02em;
+}
+.map-tab.active .badge {
+  background: rgba(169, 203, 224, 0.25);
+  color: var(--sky);
+}
+
+.map-wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 240px;
+  gap: 18px;
+}
+@media (max-width: 880px) {
+  .map-wrap { grid-template-columns: 1fr; }
+}
+.map-canvas {
+  position: relative;
+  height: 460px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--paler);
+  overflow: hidden;
+}
+.map-canvas .map-loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: var(--grey);
+  text-align: center;
+  padding: 24px;
+}
+.leaflet-container { font-family: inherit; background: var(--paler); }
+.dist-tip {
+  background: #fff !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 4px !important;
+  font-size: 12px !important;
+  color: var(--ink) !important;
+  padding: 6px 9px !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08) !important;
+  font-family: inherit !important;
+}
+.dist-tip:before { display: none; }
+
+.map-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 13px;
+}
+.leg-row {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+.leg-swatch {
+  display: inline-block;
+  width: 22px;
+  height: 14px;
+  border-radius: 3px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.leg-swatch.swatch-flagged {
+  background: rgba(168, 75, 47, 0.55);
+  border: 2px solid #14263F;
+}
+.leg-swatch.swatch-other {
+  background: rgba(61, 123, 137, 0.18);
+  border: 1px dashed #6B6A66;
+}
+.leg-swatch.swatch-outline {
+  background: transparent;
+  border: 3px solid #14263F;
+}
+.leg-title { font-weight: 700; color: var(--ink); line-height: 1.3; }
+.leg-sub { font-size: 12px; color: var(--grey); line-height: 1.4; }
+.leg-hover {
+  padding: 8px 10px;
+  background: var(--paler);
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--navy);
+  font-variant-numeric: tabular-nums;
+}
+.leg-note {
+  font-size: 11px;
+  color: var(--grey);
+  line-height: 1.5;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+}

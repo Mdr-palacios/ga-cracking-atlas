@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import { CASES, COUNTIES, STATE_GROWTH, UNITY_DENIED, type CrackingCase, type Group } from "./data";
+import { CountyMap } from "./CountyMap";
 import {
   BarChart,
   Bar,
@@ -26,7 +27,7 @@ function caseCount(county: string): number {
 }
 
 function Logo() {
-  // Geometric mark: a square being cracked diagonally — the visual idea of redistricting
+  // Geometric mark: a square being cracked diagonally (the visual idea of redistricting)
   return (
     <svg width="36" height="36" viewBox="0 0 36 36" aria-label="Cracking logo" fill="none">
       <rect x="2" y="2" width="32" height="32" stroke="currentColor" strokeWidth="2" />
@@ -203,7 +204,7 @@ export default function App() {
       {/* Masthead */}
       <header className="masthead">
         <Logo />
-        <div className="logo">After Callais GA — Cracking Atlas</div>
+        <div className="logo">After Callais GA: Cracking Atlas</div>
         <div className="meta">
           <div><strong>Steering committee briefing</strong></div>
           <div>Common Cause GA · Coalition for Redistricting</div>
@@ -221,7 +222,7 @@ export default function App() {
           </h1>
           <p className="deck">
             Georgia's 2021 enacted maps cracked, packed, and diluted Latino and AAPI communities
-            across five counties — Gwinnett, Hall, Cobb, Forsyth, and Whitfield — even though those
+            across five counties (Gwinnett, Hall, Cobb, Forsyth, and Whitfield), even though those
             groups drove nearly all of the state's population growth. The 2023 court-ordered
             remedial map then dismantled Gwinnett's coalition district to preserve the GOP's seat
             count. This dashboard documents the cases, district by district.
@@ -290,7 +291,7 @@ export default function App() {
         <div className="eyebrow">Filter by county</div>
         <h2>Cracking by county <span className="count">{filtered.length} of {CASES.length} cases shown</span></h2>
         <p className="lede">
-          Five counties carry the bulk of Georgia's Latino and AAPI population — and the bulk of the
+          Five counties carry the bulk of Georgia's Latino and AAPI population, and the bulk of the
           documented cracking. Select a county to focus.
         </p>
 
@@ -314,7 +315,12 @@ export default function App() {
           ))}
         </div>
 
-        {countyKey !== "all" && <CountyDemographics key_={countyKey} />}
+        {countyKey !== "all" && (
+          <>
+            <CountyDemographics key_={countyKey} />
+            <CountyMap countyKey={countyKey} />
+          </>
+        )}
 
         {/* Secondary filters */}
         <div className="filters">
@@ -423,7 +429,7 @@ export default function App() {
                 target="_blank"
                 rel="noreferrer"
               >
-                NPR — Georgia's coalition districts (Dec 20, 2023)
+                NPR: Georgia's coalition districts (Dec 20, 2023)
               </a>
             </li>
             <li>
@@ -437,7 +443,7 @@ export default function App() {
                 target="_blank"
                 rel="noreferrer"
               >
-                Atlanta Voice — Cobb and Gwinnett commission maps (Feb 2022)
+                Atlanta Voice: Cobb and Gwinnett commission maps (Feb 2022)
               </a>
             </li>
             <li>
@@ -446,7 +452,7 @@ export default function App() {
                 target="_blank"
                 rel="noreferrer"
               >
-                Atlanta Regional Commission — 11-county demographic change (2021)
+                Atlanta Regional Commission: 11-county demographic change (2021)
               </a>
             </li>
             <li>
@@ -455,7 +461,7 @@ export default function App() {
                 target="_blank"
                 rel="noreferrer"
               >
-                Census QuickFacts — county-level demographics
+                Census QuickFacts: county-level demographics
               </a>
             </li>
           </ul>

@@ -42,7 +42,7 @@ export const COUNTIES: Record<string, CountyProfile> = {
     fips: "13117",
     pop2020: 251283,
     shares: { white: 65.1, black: 4.3, latino: 10.0, aapi: 18.0 },
-    growth_2010_2020: { aapi: 692 }, // 6.2% to 17.95% AAPI alone — see Wikipedia + ARC tract data
+    growth_2010_2020: { aapi: 692 }, // 6.2% to 17.95% AAPI alone (see Wikipedia + ARC tract data)
     note: "AAPI share grew nearly 8x from 2000 to 2020. One census tract jumped from 0.7% to 43.7%.",
   },
   whitfield: {
@@ -88,7 +88,7 @@ export const CASES: CrackingCase[] = [
     affects: ["latino", "aapi", "black"],
     headline: "283,464 people moved out of CD-7 into majority-White CD-9",
     detail:
-      "Map drawers moved 283,464 people — 85% of them from Gwinnett, 54% people of color — out of the old CD-7 and into majority-White CD-9. The coalition that elected Lucy McBath was surgically dispersed.",
+      "Map drawers moved 283,464 people (85% of them from Gwinnett, 54% people of color) out of the old CD-7 and into majority-White CD-9. The coalition that elected Lucy McBath was surgically dispersed.",
     metrics: [
       { label: "People moved", value: "283,464" },
       { label: "From Gwinnett", value: "85%" },
@@ -171,7 +171,7 @@ export const CASES: CrackingCase[] = [
     affects: ["latino", "aapi", "black"],
     headline: "Lawrenceville split 3 ways. Norcross split 2 ways. New majority-White district.",
     detail:
-      "The 2022 county commission map split Lawrenceville into three districts and Norcross into two — both diverse municipalities. A new majority-White district was carved around Buford and Suwanee in northern Gwinnett.",
+      "The 2022 county commission map split Lawrenceville into three districts and Norcross into two (both diverse municipalities). A new majority-White district was carved around Buford and Suwanee in northern Gwinnett.",
     metrics: [
       { label: "Lawrenceville split", value: "3 ways" },
       { label: "Norcross split", value: "2 ways" },
@@ -217,7 +217,7 @@ export const CASES: CrackingCase[] = [
     affects: ["latino", "aapi", "black"],
     headline: "SD-56 lost 14.56 points of POC voting-age population",
     detail:
-      "Map drawers surgically removed diverse areas from SD-56 and moved them into SD-14. But SD-14 was not drawn as a coalition district either — the move just dispersed voters of color rather than creating opportunity anywhere.",
+      "Map drawers surgically removed diverse areas from SD-56 and moved them into SD-14. But SD-14 was not drawn as a coalition district either: the move just dispersed voters of color rather than creating opportunity anywhere.",
     metrics: [{ label: "SD-56 POC VAP change", value: "−14.56 pts" }],
     geography: ["Cobb County (east)"],
     source: {
@@ -256,7 +256,7 @@ export const CASES: CrackingCase[] = [
     affects: ["latino", "aapi", "black"],
     headline: "Diversifying Cobb suburbs paired with rural White counties",
     detail:
-      "CD-11 pairs the center of Cobb County and cities along I-75 (Marietta, Smyrna, Powder Springs, Austell) with majority-White Cherokee, Bartow, and Pickens counties — preserving the cracking of growing communities of color.",
+      "CD-11 pairs the center of Cobb County and cities along I-75 (Marietta, Smyrna, Powder Springs, Austell) with majority-White Cherokee, Bartow, and Pickens counties, preserving the cracking of growing communities of color.",
     metrics: [{ label: "Diluted city centers", value: "4" }],
     geography: ["Marietta", "Smyrna", "Powder Springs", "Austell"],
     source: {
@@ -276,7 +276,7 @@ export const CASES: CrackingCase[] = [
     affects: ["aapi"],
     headline: "AAPI opportunity district denied at the fastest-growing AAPI corridor",
     detail:
-      "HD-25 paired growing AAPI population centers in North Fulton and South Forsyth with majority-White areas. Forsyth's AAPI share grew from <1% in 2000 to ~18% in 2020 — one census tract jumped from 0.7% to 43.7% AAPI. Plaintiffs argued this could have been an AAPI opportunity coalition district. It wasn't drawn that way.",
+      "HD-25 paired growing AAPI population centers in North Fulton and South Forsyth with majority-White areas. Forsyth's AAPI share grew from <1% in 2000 to ~18% in 2020 (one census tract jumped from 0.7% to 43.7% AAPI). Plaintiffs argued this could have been an AAPI opportunity coalition district. It wasn't drawn that way.",
     metrics: [
       { label: "Forsyth AAPI 2000", value: "0.78%" },
       { label: "Forsyth AAPI 2020", value: "17.95%" },
@@ -300,7 +300,7 @@ export const CASES: CrackingCase[] = [
     affects: ["latino"],
     headline: "A 'majority-Latinx' district where Latino voters can't actually elect",
     detail:
-      "HD-4 was drawn at 50.07% Latinx by total population. But Latinx CVAP was only 25.41% and Latinx registered voters 35.10%. The numbers were arranged to claim a majority-Latino district existed — without giving Latino voters a meaningful opportunity to elect candidates of choice.",
+      "HD-4 was drawn at 50.07% Latinx by total population. But Latinx CVAP was only 25.41% and Latinx registered voters 35.10%. The numbers were arranged to claim a majority-Latino district existed, without giving Latino voters a meaningful opportunity to elect candidates of choice.",
     metrics: [
       { label: "Latinx total pop", value: "50.1%" },
       { label: "Latinx CVAP", value: "25.4%" },
